@@ -1,0 +1,20 @@
+<ion-view view-title="Post a new task!">
+  <ion-content style="text-align:center;" class="padding">
+	<form ng-submit="postTask(task)">
+		<label class="item item-input item-floating-label">
+			<span class="input-label">Task title:</span>
+			<input ng-model="task.title" name="email" type="text" placeholder="Enter the task title...">
+		</label>
+		<label class="item item-input item-floating-label">
+			<span class="input-label">Describe what you need done:</span>
+			<input ng-model="task.description" name="password" type="text" placeholder="Enter your task description...">
+		</label>
+		<label class="item item-input item-floating-label">
+			<span class="input-label">How much will you pay?</span>
+			<input ng-model="task.total" name="password" type="number" placeholder="Enter your money offer...">
+		</label>		
+		<br>		
+		<input type="submit"  value="Post" class="button button-balanced">
+	</form>
+  </ion-content>
+</ion-view>

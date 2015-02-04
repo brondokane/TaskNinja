@@ -1,0 +1,16 @@
+<ion-view view-title="Browse tasks!">
+  <ion-content style="text-align:center;" class="padding">
+  <input type="text" ng-model="searchTask" class="form-control" placeholder="Search">
+  	<div class="list">
+		<a ng-repeat="task in tasks | filter: searchTask | orderBy:'title'" href="#tab/edit/{{task.$id}}">
+			<div class="item item-divider item-calm">
+				{{task.title}} - ${{task.total}}
+			</div>
+			<div class="item">
+				{{task.description | limitTo:25 }}{{task.description.length > 25? "...": "" }}
+			</div>
+			<br>
+		</a>
+	</div>
+  </ion-content>
+</ion-view>
