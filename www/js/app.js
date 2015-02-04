@@ -18,7 +18,6 @@ var app = angular
   })
 
   .constant('FURL', 'https://<myUrl>.firebaseio.com/') 
-
   .config(function($stateProvider, $urlRouterProvider) {
 
     // Ionic uses AngularUI Router which uses the concept of states
