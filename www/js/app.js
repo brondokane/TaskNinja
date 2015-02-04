@@ -17,7 +17,7 @@ var app = angular
     });
   })
 
-  .constant('FURL', 'https://supercrud.firebaseio.com/') 
+  .constant('FURL', 'https://<myUrl>.firebaseio.com/') 
 
   .config(function($stateProvider, $urlRouterProvider) {
 

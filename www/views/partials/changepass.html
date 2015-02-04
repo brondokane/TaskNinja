@@ -1,0 +1,43 @@
+<div class="modal fade" id="pasModal">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="panel panel-info title">
+				<div class="panel-heading">
+					<button type="button" class="close" data-dismiss="modal" aria-label="CLose">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h3 class="panel-title">Change password</h3>
+				</div>
+				<div class="panel-body">
+					<form ng-submit="passwordChange(user)">
+						<div class="input-group">
+							<div class="input-group-addon">
+								<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>			
+							</div>
+							<input type="email" ng-model="user.email" class="form-control" required placeholder="Email">
+						</div>
+						<br>
+
+						<div class="input-group">
+							<div class="input-group-addon">
+								<span class="glyphicon glyphicon-lock" aria-hidden="true"></span>			
+							</div>
+							<input type="password" ng-model="user.oldPass" class="form-control" required placeholder="Old Password">
+						</div>
+						<br>
+
+						<div class="input-group">
+							<div class="input-group-addon">
+								<span class="glyphicon glyphicon-lock" aria-hidden="true"></span>			
+							</div>
+							<input type="password" ng-model="user.newPass" class="form-control" required placeholder="New Password">
+						</div>
+						<br>
+						<input type="submit"  value="Update" class="btn btn-info">
+					</form>					
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
