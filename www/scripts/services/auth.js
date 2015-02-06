@@ -30,7 +30,7 @@ app.factory('Auth', function(FURL, $firebaseAuth, $firebase){
 		},
 		changePassword: function (user) {
 			return auth.$changePassword({
-				email:user.email , oldPassword:user.oldPass,newPassword:user.newPass 
+				email:user.email , oldPassword: user.oldPass, newPassword:user.newPass 
 			});
 		},
 		signedIn: function () {

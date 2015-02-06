@@ -9,7 +9,7 @@
 					<h3 class="panel-title">Edit task</h3>
 				</div>
 				<div class="panel-body">
-					<form ng-submit="updateTask(selectedTask)">
+					<form ng-submit="editTask(selectedTask)">
 						<input type="text" ng-model="selectedTask.title" class="form-control" placeholder="Task title">
 						<textarea ng-model="selectedTask.description" class="form-control" placeholder="Describe what you need done"></textarea>
 						<br>

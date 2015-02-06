@@ -14,7 +14,7 @@ app.controller('AuthController', function ($scope, $location,$firebase, FURL, Au
 			toaster.pop('success',"Succesfully registered.");
 			$location.path("/")
 		},function(err) {
-			toaster.pop('error',"Ooops! Something went wrong");
+			toaster.pop('error',"Ooops! Something went wrong.");
 		});
 	};
 
@@ -23,22 +23,22 @@ app.controller('AuthController', function ($scope, $location,$firebase, FURL, Au
 			toaster.pop('success',"Succesfully logged in.");
 			$location.path("/")
 		},function(err) {
-			toaster.pop('error',"Ooops! Something went wrong");
+			toaster.pop('error',"Ooops! Something went wrong.");
 		});
 	};	
 
 	$scope.changePassword = function (user) {
-		Auth.changePassword(user).then(function() {
+		Auth.changePassword(user)
+			.then(function() {
 			//Reset form
 			$scope.user.email = '';
 			$scope.user.oldPass = '';
 			$scope.user.newPass = '';
-
 			toaster.pop('success',"Password changed succesfully.");
 
 		},function(err) {
-			toaster.pop('error',"Ooops! Something went wrong");
-		});
+			toaster.pop('error',"Ooops! Something went wrong.");
+		})
 	};	
 
 

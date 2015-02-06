@@ -7,7 +7,7 @@ var app = angular
     'ngRoute',    
     'firebase','toaster','angularMoment'
   ])
-.constant('FURL', 'https://supercrud.firebaseio.com/')  
+.constant('FURL', 'https://<myurl>.firebaseio.com/')  
 .config(function ($routeProvider) {
   $routeProvider      
     .when('/', {
